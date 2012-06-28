@@ -71,8 +71,30 @@
  ****/
 -(IBAction)base3:(id)sender 
 {
+    NSString *output;
     
-}
+    int I;
+    int Q = [inputText. text intValue];
+    int B[3];
+   ;
+         for (I= 0; I <3; I = I + 1) {
+              B[I] = 0;    
+          }
+          
+          I = 0;
+        
+          while (Q > 0) {
+              remainder = Q % 3;
+              B[I] = remainder ;
+              Q = Q / 3 ;
+              I = I + 1
+    }          
+          output = B[           
+ 
+          
+     
+    
+
 
 /****
  * BASE 4 Conversion
