@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad
 {
-    NSArray *array = [[NSArray alloc]        initWithObjects:@"1",@"2",@"3",@"4",@"5", @"6", @"7", @"8", @"9",nil];
+    NSArray *array = [[NSArray alloc]        initWithObjects:@"2",@"3",@"4",@"5", @"6", @"7", @"8", @"9",nil];
     self.pickerData = array;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -44,7 +44,7 @@
     return 1;
 }
 
--(NSInteger)pickerView:(UIPickerView *)pickerView
+-(NSInteger)pickerView:(UIPickerView *)pickerView 
 numberOfRowsInComponent:(NSInteger)component
 {
     return [pickerData count];
@@ -73,11 +73,13 @@ numberOfRowsInComponent:(NSInteger)component
     
     NSInteger row = [singlePicker selectedRowInComponent:0];
     NSString *selected = [pickerData objectAtIndex:row];
+    base= [selected intValue];
 
     NSLog (@"Input Text = %@", inputText);
     
     NSLog(@"Input Number = %d", Q);
     
+    NSLog(@"base= %i",base);
     for (I = 0; I < 20; I = I + 1) {
         B[I] = 0;
     }
@@ -128,6 +130,13 @@ numberOfRowsInComponent:(NSInteger)component
     NSLog(@"Binary Number =  %d%d%d%d %d%d%d%d %d%d%d%d", B[11], B[10], B[9], B[8], B[7], B[6], B[5], B[4], B[3], B[2], B[1], B[0]);
     
     outputText.text = output;
+
+}
+
+
+-(IBAction)removeKeyboard{
+    [inputText resignFirstResponder];    
+
 }
 
 /****

@@ -21,9 +21,10 @@
 
 @property (nonatomic, retain) IBOutlet UITextField *inputText;
 @property (nonatomic, retain) IBOutlet UITextField *outputText;
-@property(nonatomic , retain) UIPickerView *singlePicker;
-@property(nonatomic , retain) NSArray *pickerData;
+@property (nonatomic, retain) UIPickerView *singlePicker;
+@property (nonatomic, retain) NSArray *pickerData;
 
 
 -(IBAction)converter:(id)sender;
+-(IBAction)removeKeyboard;
 @end
